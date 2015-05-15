@@ -29,13 +29,13 @@ import java.util.Map;
 public final class MongoDbService extends AbstractService {
 
     MongoDbService(CloudFoundryOperations cloudFoundryOperations, RandomizedNameFactory randomizedNameFactory) {
-        super(cloudFoundryOperations, "mongolab", "sandbox", randomizedNameFactory);
+        super(cloudFoundryOperations, "mongodb", "default", randomizedNameFactory);
     }
 
     @Override
     public final URI getEndpoint(Map<String, String> environmentVariables) {
         Map<String, ?> credentials = getCredentials(environmentVariables);
-        String uriString = credentials.get("uri").toString();
+        String uriString = credentials.get("url").toString();
         return UrlNormalizer.normalize(uriString);
     }
 }

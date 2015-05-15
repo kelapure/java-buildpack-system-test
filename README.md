@@ -1,3 +1,25 @@
+#AppFog v2 fork
+
+This fork of the Java Buildpack System Tests contains some changes required to run the tests against the Cloud Foundry
+v2 instance provided by AppFog. This fork is provided as is and with no guarantees that it will be maintained or that
+the tests are being regularly run. There is also no guarantee that these tests are applicable and exhaustive for AppFog.
+
+Read the setup instructions below and set the environment variables to the values provided in the
+CenturyLink [control panel][] under the AppFog service pane. For example.
+
+| Environment Variable | Value
+| -------------------- | -----
+| `CF_TARGET` | `https://api.useast.appfog.ctl.io`
+| `CF_ORG` | The three or four letter alias value that can be found in the account details of the [control panel][]
+| `CF_SPACE` | `QA`
+
+The `CF_BUILDPACK` value should not be set in order to test the one provided by the AppFog Cloud Foundry v2 instance.
+`CF_USERNAME` and `CF_PASSWORD` should be your usual account details for CenturyLink/AppFog.
+
+This forks test applications written with Grails, Groovy, Java Main, Play, Ratpack, Spring Boot, Spring Web and Plain
+Servlet. Each application is then bound to the available services, Mysql, MongoDB and Redis. Other services can be
+tested but they have been disabled until they become available in the AppFog service.
+
 # Cloud Foundry Java Buildpack System Tests
 
 The purpose of this repository is to exercise the [Cloud Foundry Java Buildpack][] together with its dependencies and associated services to ensure that the whole works together correctly.
@@ -57,4 +79,4 @@ Set the environment variables as described above and then issue:
 This project is released under version 2.0 of the [Apache License][].
 
 [Apache License]: http://www.apache.org/licenses/LICENSE-2.0
-
+[control panel]: https://control.ctl.io/Organization/account/details

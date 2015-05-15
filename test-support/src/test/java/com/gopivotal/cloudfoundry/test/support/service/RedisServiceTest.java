@@ -22,7 +22,7 @@ import org.cloudfoundry.client.lib.CloudFoundryOperations;
 public final class RedisServiceTest extends AbstractServiceTest<RedisService> {
 
     public RedisServiceTest() {
-        super("rediscloud", "25mb");
+        super("p-redis", "shared-vm");
     }
 
     protected RedisService createService(CloudFoundryOperations cloudFoundryOperations,

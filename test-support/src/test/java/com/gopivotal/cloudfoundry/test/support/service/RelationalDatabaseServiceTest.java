@@ -43,7 +43,7 @@ public final class RelationalDatabaseServiceTest {
     private static CloudFoundryOperations createCloudFoundryOperations() {
         CloudFoundryOperations cloudFoundryOperations = mock(CloudFoundryOperations.class);
 
-        CloudServiceOffering cloudServiceOffering = new CloudServiceOffering(null, "cleardb");
+        CloudServiceOffering cloudServiceOffering = new CloudServiceOffering(null, "p-mysql");
         when(cloudFoundryOperations.getServiceOfferings()).thenReturn(Arrays.asList(cloudServiceOffering));
 
         return cloudFoundryOperations;
@@ -51,7 +51,7 @@ public final class RelationalDatabaseServiceTest {
 
     private static RandomizedNameFactory createRandomizedNameFactory() {
         RandomizedNameFactory randomizedNameFactory = mock(RandomizedNameFactory.class);
-        when(randomizedNameFactory.create("cleardb")).thenReturn("randomized-name");
+        when(randomizedNameFactory.create("p-mysql")).thenReturn("randomized-name");
 
         return randomizedNameFactory;
     }
@@ -64,8 +64,8 @@ public final class RelationalDatabaseServiceTest {
     @Test
     public void test() {
         Map<String, String> environmentVariables = new HashMap<>();
-        environmentVariables.put("VCAP_SERVICES", "{\"cleardb-n/a\":[{\"name\":\"randomized-name\"," +
-                "\"label\":\"cleardb-n/a\",\"tags\":[\"mysql\",\"relational\"],\"plan\":\"spark\"," +
+        environmentVariables.put("VCAP_SERVICES", "{\"p-mysql-n/a\":[{\"name\":\"randomized-name\"," +
+                "\"label\":\"p-mysql-n/a\",\"tags\":[\"mysql\",\"relational\"],\"plan\":\"100mb-dev\"," +
                 "\"credentials\":{\"uri\":\"http://test.uri\",\"name\":\"test-name\"," +
                 "\"hostname\":\"test-host-name\",\"port\":\"3306\",\"username\":\"test-username\"," +
                 "\"password\":\"test-password\"}}]}");
