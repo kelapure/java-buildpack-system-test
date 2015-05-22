@@ -49,10 +49,10 @@ public class TestConfiguration {
     @Value("${cf.password}")
     private volatile String password;
 
-    @Value("${cf.space}")
+    @Value("${cf.space:QA}")
     private volatile String space;
 
-    @Value("${cf.target:https://api.run.pivotal.io}")
+    @Value("${cf.target:https://api.useast.appfog.ctl.io}")
     private volatile String target;
 
     @Value("${cf.username}")
