@@ -50,7 +50,8 @@ public class RabbitAutoReconfigurationTest extends AbstractAutoReconfigurationTe
         final TestOperations testOperations = application.getTestOperations();
         Map<String, String> environmentVariables = testOperations.environmentVariables();
 
-        assertEquals(this.servicesHolder.get(RabbitService.class).getEndpoint(environmentVariables), testOperations.rabbitUrl());
+        assertEquals(this.servicesHolder.get(RabbitService.class).getEndpoint(environmentVariables),
+                testOperations.rabbitUrl());
 
         RetryTemplate.retry(INTERVAL, TIMEOUT, new RetryCallback() {
 
@@ -62,7 +63,7 @@ public class RabbitAutoReconfigurationTest extends AbstractAutoReconfigurationTe
 
             @Override
             public String getFailureMessage() {
-                return "Rabbit connection never made";
+                return String.format("Rabbit connection never made for '%s'", application.getName());
             }
         });
 
