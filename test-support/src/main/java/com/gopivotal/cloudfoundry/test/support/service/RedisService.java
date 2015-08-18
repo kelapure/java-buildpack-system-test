@@ -28,7 +28,7 @@ import java.util.Map;
 public final class RedisService extends AbstractService {
 
     RedisService(CloudFoundryOperations cloudFoundryOperations, RandomizedNameFactory randomizedNameFactory) {
-        super(cloudFoundryOperations, "rediscloud", "30mb", randomizedNameFactory);
+        super(cloudFoundryOperations, "p-redis", "shared-vm", randomizedNameFactory);
     }
 
     @Override

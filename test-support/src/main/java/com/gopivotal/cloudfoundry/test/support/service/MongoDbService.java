@@ -29,7 +29,7 @@ import java.util.Map;
 public final class MongoDbService extends AbstractService {
 
     MongoDbService(CloudFoundryOperations cloudFoundryOperations, RandomizedNameFactory randomizedNameFactory) {
-        super(cloudFoundryOperations, "mongolab", "sandbox", randomizedNameFactory);
+        super(cloudFoundryOperations, "p-mongodb", "development", randomizedNameFactory);
     }
 
     @Override

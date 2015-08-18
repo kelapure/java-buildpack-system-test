@@ -57,7 +57,7 @@ abstract class AbstractService implements Service {
 
         CloudServiceOffering cloudServiceOffering = findServiceOffering(cloudServiceOfferings,
                 String.format("%s-dev", label));
-
+        
         if (cloudServiceOffering == null) {
             cloudServiceOffering = findServiceOffering(cloudServiceOfferings, label);
         }

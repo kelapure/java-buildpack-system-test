@@ -22,7 +22,7 @@ import org.cloudfoundry.client.lib.CloudFoundryOperations;
 public final class MongoDbServiceTest extends AbstractServiceTest<MongoDbService> {
 
     public MongoDbServiceTest() {
-        super("mongolab", "sandbox");
+        super("p-mongodb", "development");
     }
 
     protected MongoDbService createService(CloudFoundryOperations cloudFoundryOperations,

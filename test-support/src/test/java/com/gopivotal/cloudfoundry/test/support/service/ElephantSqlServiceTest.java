@@ -22,7 +22,7 @@ import org.cloudfoundry.client.lib.CloudFoundryOperations;
 public final class ElephantSqlServiceTest extends AbstractServiceTest<ElephantSqlService> {
 
     public ElephantSqlServiceTest() {
-        super("elephantsql", "turtle");
+        super("mysql", "100mb-dev");
     }
 
     protected ElephantSqlService createService(CloudFoundryOperations cloudFoundryOperations,

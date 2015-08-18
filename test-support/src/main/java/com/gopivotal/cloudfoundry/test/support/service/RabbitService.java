@@ -30,7 +30,7 @@ import java.util.Map;
 public final class RabbitService extends AbstractService {
 
     RabbitService(CloudFoundryOperations cloudFoundryOperations, RandomizedNameFactory randomizedNameFactory) {
-        super(cloudFoundryOperations, "cloudamqp", "lemur", randomizedNameFactory);
+        super(cloudFoundryOperations, "p-rabbitmq", "standard", randomizedNameFactory);
     }
 
     @Override
