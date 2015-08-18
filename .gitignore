@@ -9,12 +9,13 @@ out
 .classpath
 .java-version
 .project
+.settings
 .settings/gradle/org.springsource.ide.eclipse.gradle.refresh.prefs
 .settings/gradle/org.springsource.ide.eclipse.gradle.core.import.prefs
 .settings/gradle/org.springsource.ide.eclipse.gradle.core.prefs
 test-support/.classpath
 test-support/.project
-test-support/.settings/
+test-support/.settings
 tests/.classpath
 tests/.project
-tests/.settings/
+tests/.settings
