@@ -5,3 +5,14 @@
 bin
 build
 out
+.DS_Store
+.classpath
+.java-version
+.project
+.settings/gradle/org.springsource.ide.eclipse.gradle.refresh.prefs
+test-support/.classpath
+test-support/.project
+test-support/.settings/
+tests/.classpath
+tests/.project
+tests/.settings/
