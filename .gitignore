@@ -10,6 +10,8 @@ out
 .java-version
 .project
 .settings/gradle/org.springsource.ide.eclipse.gradle.refresh.prefs
+.settings/gradle/org.springsource.ide.eclipse.gradle.core.import.prefs
+.settings/gradle/org.springsource.ide.eclipse.gradle.core.prefs
 test-support/.classpath
 test-support/.project
 test-support/.settings/
