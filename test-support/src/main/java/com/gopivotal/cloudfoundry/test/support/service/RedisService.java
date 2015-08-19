@@ -34,7 +34,7 @@ public final class RedisService extends AbstractService {
     @Override
     public final URI getEndpoint(Map<String, String> environmentVariables) {
         Map<String, ?> credentials = getCredentials(environmentVariables);
-        String host = credentials.get("hostname").toString();
+        String host = credentials.get("host").toString();
         int port = Integer.parseInt(credentials.get("port").toString());
         return URI.create(String.format("redis://%s:%d", host, port));
     }

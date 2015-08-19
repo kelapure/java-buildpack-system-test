@@ -25,7 +25,7 @@ import org.cloudfoundry.client.lib.CloudFoundryOperations;
 public final class ElephantSqlService extends RelationalDatabaseService {
 
     ElephantSqlService(CloudFoundryOperations cloudFoundryOperations, RandomizedNameFactory randomizedNameFactory) {
-        super(cloudFoundryOperations, "mysql", "100mb-dev", randomizedNameFactory);
+        super(cloudFoundryOperations, "p-mysql", "100mb-dev", randomizedNameFactory);
     }
 
 }
